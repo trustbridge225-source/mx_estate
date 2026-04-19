@@ -45,40 +45,19 @@ const FormSection = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-stretch">
           
           {/* Left Side: Project Details */}
-          <div className="lg:w-1/2 flex flex-col justify-center space-y-8 animate-fade-in">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Experience the Pinnacle of <span className="text-green-700">Luxury Living</span>
-              </h2>
-              <p className="mt-4 text-gray-600 text-lg">
-                At Max Estate Sector 105, we redefine urban elegance with wellness-focused design and world-class amenities.
-              </p>
-            </div>
+            <div className="lg:w-1/2 flex flex-col justify-center space-y-8 animate-fade-in">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    About <span className="text-green-700">Max Estates</span>
+                </h2>
 
-            <div className="grid sm:grid-cols-2 gap-6">
-              {projectDetails.map((detail, index) => (
-                <div key={index} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-green-200 transition-colors">
-                  <div className="p-3 bg-white rounded-lg shadow-sm">
-                    {detail.icon}
-                  </div>
-                  <span className="text-gray-700 font-medium">{detail.text}</span>
-                </div>
-              ))}
-            </div>
+                <p className="mt-4 text-gray-600 text-lg">
+                    Max Estates is the real estate arm of the Max Group, known for its strong legacy in healthcare and financial services. Focused on premium developments in Delhi-NCR, the brand is built around the philosophy of “LiveWell” and “WorkWell”.
+                </p>
 
-            <div className="pt-6 border-t border-gray-100">
-                <div className="flex flex-col space-y-4">
-                    <div className="flex items-center gap-3 text-gray-600">
-                        <Phone size={20} className="text-green-700" />
-                        <span>+91 73039 75006</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-gray-600">
-                        <Mail size={20} className="text-green-700" />
-                        <span>sales@maxestatenoida.com</span>
-                    </div>
-                </div>
+                <p className="mt-4 text-gray-600 text-lg">
+                    The developer emphasizes wellness-driven living with features like fresh air systems, low-density planning, and thoughtfully designed green spaces. Max Estates projects are positioned in the luxury segment, targeting modern homebuyers looking for quality, sustainability, and long-term value.
+                </p>
             </div>
-          </div>
 
           {/* Right Side: Modern Form */}
           <div className="lg:w-1/2">
