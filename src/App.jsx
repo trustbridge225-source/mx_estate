@@ -5,8 +5,10 @@ import Amenities from "./components/Amenities"
 import Highlights from "./components/HighLight"
 import FloorPlan from "./components/FloorPlan"
 import Gallery from "./components/Gallery"
+import FormSection from "./components/FormSection"
 import Footer from "./components/Footer"
 import Form from "./components/Form"
+
 
 import { useEffect,useState } from "react"
 
@@ -26,6 +28,7 @@ function App() {
       <Amenities/>
       <FloorPlan/>
       <Gallery/>
+      <FormSection />
       <Footer/>
       <Form open={open} setOpen={setOpen}/>
     </>

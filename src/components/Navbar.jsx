@@ -11,6 +11,7 @@ const Navbar = () => {
     "Gallery",
     "Price Floor",
     "Location",
+    "Contact",
   ];
 
   const handleScroll = () => {
