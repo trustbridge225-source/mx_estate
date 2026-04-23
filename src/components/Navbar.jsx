@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className={`hidden md:flex items-center gap-8 font-medium border-2 rounded-full p-3 ${scrolled ? "text-white bg-green-600" : "text-white bg-gray-400"}`}>
+        <div className={`hidden md:flex items-center gap-8 font-medium border-2 rounded-full p-3 ${scrolled ? "text-white bg-blue-600" : "text-white bg-gray-400"}`}>
           {menuItems.map((item, index) => (
             <a
               key={index}
@@ -61,9 +61,9 @@ const Navbar = () => {
           className="md:hidden flex flex-col gap-2"
           onClick={() => setOpen(!open)}
         >
-          <span className={`w-6 h-[2px] ${scrolled ? "bg-black" : "bg-white"}`}></span>
-          <span className={`w-6 h-[2px] ${scrolled ? "bg-black" : "bg-white"}`}></span>
-          <span className={`w-6 h-[2px] ${scrolled ? "bg-black" : "bg-white"}`}></span>
+          <span className={`w-6 h-[2px] ${scrolled ? "bg-black" : "bg-gray-600"}`}></span>
+          <span className={`w-6 h-[2px] ${scrolled ? "bg-black" : "bg-gray-600"}`}></span>
+          <span className={`w-6 h-[2px] ${scrolled ? "bg-black" : "bg-gray-600"}`}></span>
         </button>
       </div>
 

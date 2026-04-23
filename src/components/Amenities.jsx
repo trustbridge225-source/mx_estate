@@ -29,7 +29,7 @@ const Amenities = () => {
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-semibold text-black relative inline-block">
             Our Amenities
-            <span className="absolute left-0 -bottom-2 w-full h-1 bg-green-700 rounded-full"></span>
+            <span className="absolute left-0 -bottom-2 w-full h-1 bg-blue-600 rounded-full"></span>
           </h2>
 
           <p className="mt-6 text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -52,8 +52,8 @@ const Amenities = () => {
               >
                 <div
                   className="w-16 h-16 flex items-center justify-center 
-                             bg-green-100 text-green-700 rounded-full 
-                             group-hover:bg-green-700 group-hover:text-white 
+                             bg-blue-600 text-white rounded-full 
+                             group-hover:bg-white group-hover:text-blue-600 
                              transition-all duration-300"
                 >
                   <Icon size={28} />

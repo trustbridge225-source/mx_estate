@@ -8,6 +8,7 @@ import Gallery from "./components/Gallery"
 import FormSection from "./components/FormSection"
 import Footer from "./components/Footer"
 import Form from "./components/Form"
+import { Toaster } from "react-hot-toast";
 
 
 import { useEffect,useState } from "react"
@@ -31,6 +32,7 @@ function App() {
       <FormSection />
       <Footer/>
       <Form open={open} setOpen={setOpen}/>
+      <Toaster/>
     </>
   )
 }

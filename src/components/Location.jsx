@@ -26,7 +26,7 @@ const Location = () => {
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-semibold text-black relative inline-block">
             Location Advantages
-            <span className="absolute left-0 -bottom-2 w-full h-1 bg-green-700 rounded-full"></span>
+            <span className="absolute left-0 -bottom-2 w-full h-1 bg-blue-600 rounded-full"></span>
           </h1>
 
           <p className="mt-6 text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto">
@@ -46,13 +46,13 @@ const Location = () => {
             <ul className="space-y-4">
               {advantages.map((item, index) => (
                 <li key={index} className="flex items-start gap-3 text-gray-700 text-lg">
-                  <span className="mt-2 w-2 h-2 bg-green-700 rounded-full shrink-0"></span>
+                  <span className="mt-2 w-2 h-2 bg-blue-600 rounded-full shrink-0"></span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
 
-            <button className="mt-8 bg-green-700 hover:bg-green-800 transition-all duration-300 text-white px-8 py-3 rounded-full text-lg shadow-md hover:shadow-lg flex items-center gap-2" onClick={() => setOpen(true)}>
+            <button className="mt-8 bg-blue-600 hover:bg-blue-800 transition-all duration-300 text-white px-8 py-3 rounded-full text-lg shadow-md hover:shadow-lg flex items-center gap-2" onClick={() => setOpen(true)}>
               Book Visit
               <CircleArrowRight size={20} />
             </button>

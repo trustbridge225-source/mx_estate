@@ -1,5 +1,7 @@
 import { X } from "lucide-react";
 import { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Form = ({ open, setOpen }) => {
   const [formData, setFormData] = useState({
@@ -7,7 +9,9 @@ const Form = ({ open, setOpen }) => {
     email: "",
     phone: "",
     message: "",
+    propertyName:"Max Estates - Sector 105"
   });
+  const [isSubmitting,setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -16,22 +20,36 @@ const Form = ({ open, setOpen }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     if (!formData.name || !formData.email) {
-      alert("Please fill all required fields");
+      toast.error("Please fill all required fields");
       return;
     }
 
     if (!/^\d{10}$/.test(formData.phone)) {
-      alert("Enter valid 10-digit phone number");
+      toast.error("Enter valid 10-digit phone number");
       return;
     }
 
-    const whatsApp = `https://wa.me/917303975006?text=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}%0A%0ALocation: Max Estates - Sector 105`;
+    const res = await axios.post("https://bkndlndng.trustbridgerealty.in/interest/v1/create",{
+      ...formData,
+      propertyName:"Max Estates - Sector 105"
+    })
 
-    window.open(whatsApp, "_blank");
+    if(res.data.success === true){
+      toast.success("Form submitted successfully, our team will get back to you soon");
+      console.log(res);
+    }
+    else{
+      toast.error("Something went wrong");
+    }
+
+    // const whatsApp = `https://wa.me/917303975006?text=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}%0A%0ALocation: Max Estates - Sector 105`;
+
+    // window.open(whatsApp, "_blank");
 
     setOpen(false);
 
@@ -100,9 +118,9 @@ const Form = ({ open, setOpen }) => {
 
           <button
             type="submit"
-            className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition"
+            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
           >
-            Send
+          {isSubmitting ? "Submitting..." : "Send"}
           </button>
 
         </form>

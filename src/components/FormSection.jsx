@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Building2, Trees, ShieldCheck, Send } from "lucide-react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const FormSection = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +9,7 @@ const FormSection = () => {
     email: "",
     phone: "",
     message: "",
+    propertyName:"Max Estates - Sector 105"
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,18 +21,34 @@ const FormSection = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    try {
+      const res = await axios.post("https://bkndlndng.trustbridgerealty.in/interest/v1/create",{
+        ...formData,
+        propertyName:"Max Estates - Sector 105"
+      })
+      if(res.data.success === true){
+        toast.success("Form submitted successfully, our team will get back to you soon");
+        console.log(res);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
     
     // Simulate WhatsApp redirect like in Form.jsx
-    const whatsApp = `https://wa.me/917303975006?text=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}%0A%0ALocation: Max Estates - Sector 105`;
+    // const whatsApp = `https://wa.me/917303975006?text=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}%0A%0ALocation: Max Estates - Sector 105`;
     
-    setTimeout(() => {
-        window.open(whatsApp, "_blank");
-        setIsSubmitting(false);
-        setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 1000);
+    // setTimeout(() => {
+    //     window.open(whatsApp, "_blank");
+    //     setIsSubmitting(false);
+    //     setFormData({ name: "", email: "", phone: "", message: "" });
+    // }, 1000);
+    setIsSubmitting(false);
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   const projectDetails = [
@@ -47,7 +66,7 @@ const FormSection = () => {
           {/* Left Side: Project Details */}
             <div className="lg:w-1/2 flex flex-col justify-center space-y-8 animate-fade-in">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                    About <span className="text-green-700">Max Estates</span>
+                    About <span className="text-blue-600">Max Estates</span>
                 </h2>
 
                 <p className="mt-4 text-gray-600 text-lg">
@@ -126,7 +145,7 @@ const FormSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full flex items-center justify-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-700/20 transform transition-all active:scale-[0.98] ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    className={`w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-600/20 transform transition-all active:scale-[0.98] ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   >
                     {isSubmitting ? "Sending..." : (
                         <>

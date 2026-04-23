@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { X } from "lucide-react";
-import bg from "../assets/mxbg.webp";
+import bg from "../assets/bg.webp";
 import lt1 from "../assets/mx1.webp";
 import lt2 from "../assets/mx3.webp";
 import lt3 from "../assets/mx.webp";
@@ -29,7 +29,7 @@ const Gallery = () => {
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-semibold text-black relative inline-block">
             Gallery
-            <span className="absolute left-0 -bottom-2 w-full h-1 bg-green-700 rounded-full"></span>
+            <span className="absolute left-0 -bottom-2 w-full h-1 bg-blue-600 rounded-full"></span>
           </h2>
 
           <p className="mt-6 text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto">

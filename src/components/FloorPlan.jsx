@@ -36,7 +36,7 @@ const FloorPlan = () => {
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-semibold text-black relative inline-block">
             Floor Plan
-            <span className="absolute left-0 -bottom-2 w-full h-1 bg-green-700 rounded-full"></span>
+            <span className="absolute left-0 -bottom-2 w-full h-1 bg-blue-600 rounded-full"></span>
           </h2>
 
           <p className="mt-6 text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -53,7 +53,7 @@ const FloorPlan = () => {
               className={`px-8 py-3 rounded-full text-lg font-medium transition-all duration-300
               ${
                 active === plan.title
-                  ? "bg-green-700 text-white shadow-lg"
+                  ? "bg-blue-600 text-white shadow-lg"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
@@ -90,7 +90,7 @@ const FloorPlan = () => {
 
               <div className="absolute inset-0 flex items-center justify-center">
                 <div
-                  className="bg-green-700 px-6 py-2 rounded-full flex items-center gap-2 cursor-pointer hover:bg-green-600 transition-all duration-300"
+                  className="bg-blue-600 px-6 py-2 rounded-full flex items-center gap-2 cursor-pointer hover:bg-blue-800 transition-all duration-300"
                   onClick={() => setOpen(true)}
                 >
                   <button className="text-white text-lg font-semibold">
