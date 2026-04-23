@@ -32,7 +32,10 @@ const FormSection = () => {
       })
       if(res.data.success === true){
         toast.success("Form submitted successfully, our team will get back to you soon");
-        console.log(res);
+        // console.log(res);
+        window.dataLayer.push({
+          event:"form_success"
+        })
       }
     } catch (error) {
       console.log(error);

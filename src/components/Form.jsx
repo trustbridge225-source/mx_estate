@@ -41,7 +41,10 @@ const Form = ({ open, setOpen }) => {
 
     if(res.data.success === true){
       toast.success("Form submitted successfully, our team will get back to you soon");
-      console.log(res);
+      // console.log(res);
+      window.dataLayer.push({
+        event:"form_success"
+      })
     }
     else{
       toast.error("Something went wrong");
