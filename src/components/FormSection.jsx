@@ -100,6 +100,10 @@ const FormSection = () => {
               <p className="mt-4">
                 Our projects emphasize wellness-driven living with fresh air systems, low-density planning, and thoughtfully designed green spaces, targeting modern homebuyers looking for quality and sustainability.
               </p>
+              <div className="mt-4">
+                <p className="text-sm font-semibold text-gray-500">RERA NO:</p>
+                <p className="text-blue-800 font-bold">UPRERAPRJ529777/03/2026</p>
+              </div>
             </div>
 
             {/* Quick Contact CTA */}
