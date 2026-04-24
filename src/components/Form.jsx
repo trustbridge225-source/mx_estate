@@ -87,7 +87,7 @@ const Form = ({ open, setOpen }) => {
 
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-5 right-5 p-2 bg-gray-50 hover:bg-gray-100 text-gray-500 hover:text-gray-800 rounded-full transition-colors z-10"
+              className="absolute top-5 right-5 p-2 bg-gray-50 hover:bg-gray-300 text-gray-500 hover:text-gray-800 rounded-full transition-colors z-10"
             >
               <X className="h-5 w-5" />
             </button>

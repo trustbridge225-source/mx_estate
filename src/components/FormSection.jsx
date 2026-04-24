@@ -240,6 +240,7 @@ const FormSection = () => {
                       </>
                   )}
                 </motion.button>
+                <p className="text-center text-sm text-gray-500 mt-4">We respect your privacy. You will receive a call from our team within 24 hours.</p>
               </form>
             </div>
           </motion.div>
